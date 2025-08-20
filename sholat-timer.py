@@ -19,7 +19,8 @@ while True:
     for name, time in prayer_times.items():
         readable_time = time.strftime("%m/%d/%Y, %I:%M:%S %p %Z")
         if name == "fajr":
-            name = "shubuh"              if time > now:
+            name = "shubuh"              
+        if time > now:
             shalat_lanjutan = (name, time)
             break
 
