@@ -15,18 +15,20 @@ prayer_times = pt.calc_times(current_day, tz, long, lat)
 while True:
     now = dt.now(tz)
     shalat_lanjutan = None
+    name = None
     for name, time in prayer_times.items():
         readable_time = time.strftime("%m/%d/%Y, %I:%M:%S %p %Z")
-        # print(f"Shalat : {name}, Waktu : {readable_time}\n")
-        if time > now:
+        if name == "fajr":
+            name = "shubuh"              if time > now:
             shalat_lanjutan = (name, time)
             break
 
+
     if shalat_lanjutan:
-        print(shalat_lanjutan[1], " : ", now)
+        # print(shalat_lanjutan[1], " : ", now) #test
         count_time = shalat_lanjutan[1] - now
         rm_microsec = str(count_time).split(".")[0] # split after titik jadi 2 array ambil array pertama [0]
-        print(f"Waktu shalat berikut nya : {rm_microsec}")
+        print(f"Shalat berikut nya {shalat_lanjutan[0]} : {rm_microsec}")
             
     elif not shalat_lanjutan:
         besok = current_day + timedelta(days=1)
