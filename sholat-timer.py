@@ -12,65 +12,68 @@ print(f"Process ID : ", os.getpid())
 next_salat = None
 rm_microsec = None
 
-def CLI(rm_microsec, next_salat):
-    while True:
-
-        pt = salat.PrayerTimes(salat.CalculationMethod.MWL, salat.AsrMethod.STANDARD)
-        tz = pytz.timezone("Asia/Jakarta")
-        long = 107.61912
-        lat = -6.91746
-        now = dt.now(tz)
-        shalat_lanjutan = None
-        name = None
-        current_day = dt.now().date()
-        prayer_times = pt.calc_times(current_day, tz, long, lat)
-
-
-        
-
-        for name, time in prayer_times.items():
-            readable_time = time.strftime("%m/%d/%Y, %I:%M:%S %p %Z")
-            if name == "fajr":
-                name == "shubuh"              
-            if time > dt.now(tz):
-                shalat_lanjutan = (name, time)
-                break
-
-
-        if shalat_lanjutan:
-            # print(shalat_lanjutan[1], " : ", now) #test
-            count_time = shalat_lanjutan[1] - now
-            rm_microsec = str(count_time).split(".")[0] # split after titik jadi 2 array ambil array pertama [0]
-            next_salat = shalat_lanjutan[0]
-
-            print(f"Shalat berikut nya {next_salat} : {rm_microsec}")
-
-        elif not shalat_lanjutan:
-            besok = current_day + timedelta(days=1)
-            prayer_times = pt.calc_times(besok, tz, long, lat)
-            current_day = besok
-            print("test")
-            continue
-            # else:
-            #     print("Sudah 5 Waktu hari ini.")
-        sleep(1)
- 
 def GUI_TKINTER():
     app = customtkinter.CTk()
     app.title("Shalat Reminder")
     app.mainloop()
         
 
-thread_CLI = threading.Thread(target=CLI, args=(rm_microsec, next_salat))
 thread_GUI = threading.Thread(target=GUI_TKINTER)
 
-thread_CLI.start()
-print(next_salat)
 thread_GUI.start()
 
-thread_CLI.join()
+while True:
+
+    pt = salat.PrayerTimes(salat.CalculationMethod.MWL, salat.AsrMethod.STANDARD)
+    tz = pytz.timezone("Asia/Jakarta")
+    long = 107.61912
+    lat = -6.91746
+    now = dt.now(tz)
+    shalat_lanjutan = None
+    name = None
+    current_day = dt.now().date()
+    prayer_times = pt.calc_times(current_day, tz, long, lat)
+
+
+    
+
+    for name, time in prayer_times.items():
+        readable_time = time.strftime("%m/%d/%Y, %I:%M:%S %p %Z")
+        if name == "fajr":
+            name == "shubuh"              
+        if time > now:
+            shalat_lanjutan = (name, time)
+            break
+
+
+    if shalat_lanjutan:
+        # print(shalat_lanjutan[1], " : ", now) #test
+        count_time = shalat_lanjutan[1] - now
+        rm_microsec = str(count_time).split(".")[0] # split after titik jadi 2 array ambil array pertama [0]
+        next_salat = shalat_lanjutan[0]
+        
+        print(f"Shalat berikut nya {next_salat} : {rm_microsec}")
+        
+    elif not shalat_lanjutan:
+        besok = current_day + timedelta(days=1)
+        prayer_times = pt.calc_times(besok, tz, long, lat)
+        current_day = besok
+        print("test")
+        continue
+        # else:
+        #     print("Sudah 5 Waktu hari ini.")
+    sleep(1)
+
+
+
+# print(CLI(rm_microsec, next_salat))
+# thread_CLI = threading.Thread(target=CLI, args=(rm_microsec, next_salat))
+
+
+
+
+
+
+
+
 thread_GUI.join()
-
-
-
-
