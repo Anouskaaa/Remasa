@@ -1,4 +1,4 @@
-datetime
-pytz
-salat
-PyQt6
+datetime==5.5
+pytz==2025.2
+salat==1.1.0
+
