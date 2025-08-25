@@ -3,7 +3,7 @@ A simple yet powerful Python application designed to remind you of daily prayer 
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT%20License-green) ![Stars](https://img.shields.io/github/stars/Remasa/Remasa?style=social) ![Forks](https://img.shields.io/github/forks/Remasa/Remasa?style=social)
 
-![Prayer Time Reminder Preview](/assets/Remaja Masjid.png)
+![Prayer Time Reminder Preview](/assets/remaja-masjid.png)
 _A placeholder for a screenshot or preview image of Remasa in action._
 
 
