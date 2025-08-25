@@ -3,8 +3,7 @@ A simple yet powerful Python application designed to remind you of daily prayer 
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT%20License-green) ![Stars](https://img.shields.io/github/stars/Remasa/Remasa?style=social) ![Forks](https://img.shields.io/github/forks/Remasa/Remasa?style=social)
 
-![Prayer Time Reminder Preview](/assets/remaja-masjid.png) {width=30%; height=auto}
-
+![Prayer Time Reminder Preview]<img src="/assets/remaja-masjid.png" width="300" height="auto">
 ## ✨ Features
 
 *   ⏰ **Accurate Prayer Times**: Automatically calculates and displays prayer times based on your location.
@@ -78,8 +77,6 @@ LOCATION = {"latitude": -6.2088, "longitude": 106.8456} # Example: Jakarta
 CALC_METHOD = "MWL" # Muslim World League
 ```
 
-![Remasa Usage Screenshot](/assets/usage_screenshot_placeholder.png)
-_A placeholder for a screenshot illustrating the application's output or UI._
 
 
 ## 🗺️ Project Roadmap
@@ -136,4 +133,4 @@ This project is licensed under the **MIT License**.
 
 You are free to use, modify, and distribute this software under the terms of the MIT License. A copy of the license can be found in the [LICENSE](LICENSE) file in the root of this repository.
 
-Copyright (c) 2023 Anouskaaa
+Copyright (c) 2025 Anouskaaa
