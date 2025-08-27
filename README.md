@@ -3,7 +3,7 @@ A simple yet powerful Python application designed to remind you of daily prayer 
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT%20License-green) ![Stars](https://img.shields.io/github/stars/Remasa/Remasa?style=social) ![Forks](https://img.shields.io/github/forks/Remasa/Remasa?style=social)
 
-<img src="/assets/remaja-masjid.png" width="300" height="auto">
+<img src="/assets/remaja-masjid.png" width="250" height="auto">
 
 ## ✨ Features
 
@@ -80,36 +80,20 @@ CALC_METHOD = "MWL" # Muslim World League
 
 
 
-## 🗺️ Project Roadmap
+## 🗺️ Project TODO
 
-Remasa is continuously evolving. Here are some of the planned features and improvements:
+- [ ] Make a clean code 
+- [ ] Make the program run when system boot settings
+- [ ] Adzan play when time matched with the pray time 
+- [ ] Build a Graphical User Interface 
+- [ ] Create a pray time table list 
 
-*   **Version 1.1.0**:
-    *   Implement a simple Graphical User Interface (GUI) for easier interaction.
-    *   Allow users to select their location from a predefined list or map.
-    *   Add support for more prayer time calculation methods.
-*   **Future Enhancements**:
-    *   Cross-platform desktop notifications (e.g., using `plyer`).
-    *   Integration with external APIs for more precise location data.
-    *   Ability to customize notification sounds and messages.
-    *   Comprehensive logging for debugging and monitoring.
-
-
-## 🤝 Contribution Guidelines
-
-We welcome contributions to make Remasa even better! Please follow these guidelines:
 
 ### Code Style
 
 *   Adhere to [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python code style.
 *   Use clear and concise variable/function names.
 *   Include comments where necessary to explain complex logic.
-
-### Branch Naming Conventions
-
-*   For new features: `feature/your-feature-name`
-*   For bug fixes: `bugfix/issue-description`
-*   For documentation updates: `docs/update-description`
 
 ### Pull Request Process
 
@@ -121,17 +105,9 @@ We welcome contributions to make Remasa even better! Please follow these guideli
 6.  Open a Pull Request (PR) to the `main` branch of the original Remasa repository.
 7.  Provide a clear description of your changes in the PR, linking to any relevant issues.
 
-### Testing Requirements
-
-*   Ensure that any new features include appropriate unit tests.
-*   All existing tests should pass after your changes.
-*   Provide steps to manually test your changes if automated tests are not applicable.
-
-
 ## 📄 License Information
 
 This project is licensed under the **MIT License**.
 
 You are free to use, modify, and distribute this software under the terms of the MIT License. A copy of the license can be found in the [LICENSE](LICENSE) file in the root of this repository.
 
-Copyright (c) 2025 Anouskaaa
