@@ -1,4 +1,5 @@
 datetime==5.5
 pytz==2025.2
 salat==1.1.0
+geocoder==1.38.1
 
