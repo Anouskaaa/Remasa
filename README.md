@@ -50,14 +50,14 @@ Ensure you have Python 3.x installed. You can download it from [python.org](http
 
 ## 💡 Usage Examples
 
-Once installed, you can run the `sholat-timer.py` script to start receiving prayer time reminders.
+Once installed, you can run the `shalat_timer.py` script to start receiving prayer time reminders.
 
 ### Basic Usage
 
 To run the prayer timer, simply execute the main script:
 
 ```bash
-python sholat-timer.py
+python shalat_timer.py
 ```
 
 This will typically display the current prayer times and start the reminder service.
@@ -69,11 +69,11 @@ Remasa might offer configuration options for:
 *   **Calculation Method**: Choosing different Islamic prayer time calculation methods (e.g., MWL, ISNA, Egypt).
 *   **Notification Preferences**: Customizing reminder sounds or display methods.
 
-These options can usually be set within the `sholat-timer.py` script or a separate configuration file.
+These options can usually be set within the `shalat_timer.py` script or a separate configuration file.
 
 _Example of configuration (conceptual):_
 ```python
-# Inside sholat-timer.py or a config.py
+# Inside shalat_timer.py or a config.py
 LOCATION = {"latitude": -6.2088, "longitude": 106.8456} # Example: Jakarta
 CALC_METHOD = "MWL" # Muslim World League
 ```
