@@ -10,8 +10,6 @@ import geocoder
 
 tz = pytz.timezone("Asia/Jakarta")
 pt = salat.PrayerTimes(salat.CalculationMethod.MWL, salat.AsrMethod.STANDARD)
-# long = 107.61912
-# lat = -6.91746
 g = geocoder.ip('me')
 shalat_lanjutan = None
 
